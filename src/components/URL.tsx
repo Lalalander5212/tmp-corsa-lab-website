@@ -36,14 +36,14 @@ export const URL = styled(Link)`
   }
 
   &[href*='arxiv.org']::before {
-    content: url('/images/arxiv_logo.svg');
+    content: url('${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/arxiv_logo.svg');
     display: inline-block;
     width: 11px;
     height: 16px;
   }
 
   &[href$='.pdf']::before {
-    content: url('/images/pdf_icon.svg');
+    content: url('${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/pdf_icon.svg');
     display: in-line-block;
     width: 11px;
     height: 16px;

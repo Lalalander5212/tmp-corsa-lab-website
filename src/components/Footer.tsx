@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Color, FontVariant } from '@/app/theme'
+import { withBasePath } from '@/lib/basePath'
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -68,7 +69,7 @@ export const Footer = () => {
           target="_blank"
         >
           <Image
-            src="/images/corsa_official_logo.png"
+            src={withBasePath('/images/corsa_official_logo.png')}
             alt="CORSA Research Lab @ UCI"
             width={360}
             height={104}
@@ -78,7 +79,7 @@ export const Footer = () => {
         <FooterLogoContainer>
           <Link href="https://engineering.uci.edu/" target="_blank">
             <Image
-              src="/images/uci_engineering_wordmark_white.png"
+              src={withBasePath('/images/uci_engineering_wordmark_white.png')}
               alt="UCI Samueli School of Engineering"
               width={2515}
               height={858}

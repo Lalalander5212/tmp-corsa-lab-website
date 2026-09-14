@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import { FontVariant, Color } from '@/app/theme'
 import { ImageWithFallback } from '@/components/ImageWithFallback'
 import { Member } from '@/data/members'
+import { withBasePath } from '@/lib/basePath'
 
 const Card = styled.div`
   max-width: 250px;
@@ -86,15 +87,16 @@ interface Props {
 }
 
 export const MemberCard = ({ member }: Props) => {
-  const originalSrc = member.img ? `/members/${member.img}` : '/members/default.png'
+  const originalSrc = withBasePath(member.img ? `/members/${member.img}` : '/members/default.png')
+  const defaultSrc = withBasePath('/members/default.png')
 
   return (
     <Card>
       <ImageContainer>
         <MemberImage
           placeholder="blur"
-          blurDataURL="/members/default.png"
-          fallbackSrc="/members/default.png"
+          blurDataURL={defaultSrc}
+          fallbackSrc={defaultSrc}
           width={180}
           height={180}
           src={originalSrc}
@@ -113,7 +115,7 @@ export const MemberCard = ({ member }: Props) => {
         <Buttons>
           {member.email && (
             <EmailButton href={`mailto:${member.email}`} aria-label={`Email ${member.firstName} ${member.lastName}`}>
-              <img src="/images/email.svg" alt="" />
+              <img src={withBasePath('/images/email.svg')} alt="" />
             </EmailButton>
           )}
           {member.site && (
@@ -123,12 +125,12 @@ export const MemberCard = ({ member }: Props) => {
               rel="noopener noreferrer"
               aria-label={`${member.firstName} ${member.lastName}'s website`}
             >
-              <img src="/images/website.svg" alt="" />
+              <img src={withBasePath('/images/website.svg')} alt="" />
             </WebsiteButton>
           )}
           {member.msThesis && (
             <ThesisButton href={member.msThesis} aria-label={`${member.firstName} ${member.lastName}'s M.S. thesis`}>
-              <img src="/images/thesis.svg" alt="" />
+              <img src={withBasePath('/images/thesis.svg')} alt="" />
             </ThesisButton>
           )}
         </Buttons>

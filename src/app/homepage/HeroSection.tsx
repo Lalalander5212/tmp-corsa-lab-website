@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Section } from './Styles'
 import { GROUPPHOTOS } from '@/data/groupPhotos'
+import { withBasePath } from '@/lib/basePath'
 
 const HeroContainer = styled.div`
   display: flex;
@@ -143,7 +144,7 @@ export const HeroSection = () => {
           <HeroImageLink href="/gallery">
             <Image
               id="hero-image"
-              src={`/images/group/${GROUPPHOTOS[0].filename}`}
+              src={withBasePath(`/images/group/${GROUPPHOTOS[0].filename}`)}
               alt="CORSA Lab group picture"
               fill
               priority

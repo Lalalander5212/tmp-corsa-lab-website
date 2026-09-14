@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import { FontVariant } from '../theme'
 import Link from 'next/link'
 import { GROUPPHOTOS } from '@/data/groupPhotos'
+import { withBasePath } from '@/lib/basePath'
 
 const Row = styled.div`
   display: flex;
@@ -57,7 +58,7 @@ export default function GalleryPage() {
           <Col key={img.filename}>
             <Link href={`/images/group/${img.filename}`} target="_blank" rel="noopener noreferrer">
               <StyledImage
-                src={`/images/group/${img.filename}`}
+                src={withBasePath(`/images/group/${img.filename}`)}
                 alt={img.description}
                 width={400}
                 height={300}

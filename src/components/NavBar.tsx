@@ -6,6 +6,7 @@ import { Color, ScreenSize, linearlyScaleSize } from '@/app/theme'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
+import { withBasePath } from '@/lib/basePath'
 
 interface Props {
   children: string
@@ -218,7 +219,7 @@ export const NavBar = () => {
       <NavContainer>
         <Nav>
           <Logo href="/">
-            <LogoImage src="/images/corsa_logo.png" alt="CORSA Lab" width={215} height={93} priority />
+            <LogoImage src={withBasePath('/images/corsa_logo.png')} alt="CORSA Lab" width={215} height={93} priority />
           </Logo>
 
           <NavRow>

@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import Image from 'next/image'
 import { Color, FontVariant } from '@/app/theme'
 import { RESEARCH_PROJECTS } from '@/data/research'
+import { withBasePath } from '@/lib/basePath'
 
 const ProjectList = styled.div`
   display: flex;
@@ -57,7 +58,7 @@ export default function Page() {
             <ProjectDescription>{project.description}</ProjectDescription>
             <ProjectImageContainer>
               <Image
-                src={`/images/research/${project.image}`}
+                src={withBasePath(`/images/research/${project.image}`)}
                 alt={project.title}
                 fill
                 priority={index === 0}

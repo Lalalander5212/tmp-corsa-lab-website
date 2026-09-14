@@ -1,12 +1,17 @@
+const basePath = '/tmp-corsa-lab-website'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
     cpus: 1,
   },
   output: 'export',
-  basePath: '/tmp-corsa-lab-website',
+  basePath,
   images: {
     unoptimized: true,
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 }
 

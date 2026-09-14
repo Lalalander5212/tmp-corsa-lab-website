@@ -8,6 +8,7 @@ import { uniq, shuffle } from 'lodash'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Section, SectionHeader, Text } from './Styles'
+import { withBasePath } from '@/lib/basePath'
 
 const ResearchTopicsArea = styled.div`
   display: grid;
@@ -109,7 +110,7 @@ export const ResearchThemesSection = () => {
                     <ResearchTopicsMemberAvatar
                       width={36}
                       height={36}
-                      src={member.img ? `/members/${member.img}` : '/members/default.png'}
+                      src={withBasePath(member.img ? `/members/${member.img}` : '/members/default.png')}
                       alt={`${member.firstName} ${member.lastName}`}
                       key={member.email ?? `${member.firstName}-${member.lastName}`}
                     />
