@@ -51,7 +51,7 @@ export const MEMBERS = {
     email: 'sitaoh@uci.edu',
     position: 'Faculty',
     currentPosition: 'Assistant Professor, Lab Director',
-    img: 'sitao_square-1024x1024.jpg',
+    img: 'sitao_2025_square.jpg',
   },
   haochengxu: {
     firstName: 'Haocheng',
