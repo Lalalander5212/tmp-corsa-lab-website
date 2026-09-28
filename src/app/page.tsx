@@ -1,6 +1,7 @@
 import { HeroSection } from './homepage/HeroSection'
 import { NewsSection } from './homepage/NewsSection'
 import { ResearchThemesSection } from './homepage/ResearchThemesSection'
+import { AboutCorsaSection } from './homepage/AboutCorsaSection'
 
 export default function Page() {
   return (
@@ -8,6 +9,7 @@ export default function Page() {
       <HeroSection />
       <NewsSection />
       <ResearchThemesSection />
+      <AboutCorsaSection />
     </main>
   )
 }

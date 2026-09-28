@@ -65,6 +65,9 @@ const HeroMessage = styled.p`
   text-align: left;
   max-width: 100%;
   margin-bottom: 16px;
+  strong {
+    font-weight: 700;
+  }
   @media (max-width: ${ScreenSize.md}) {
     text-align: center;
   }
@@ -123,20 +126,19 @@ export const HeroSection = () => {
             </strong>
           </HeroSubtitle>
           <HeroMessage>
-            We are a group of passionate researchers at EECS, School of Engineering, UC Irvine, working on exciting
-            research projects related to CORSA: Compiler Optimizations, Reconfigurable and Scalable Architectures.
+            We are a group of passionate researchers at UC Irvine, working on exciting research projects related to{' '}
+            <strong>“CORSA”</strong>: <strong>C</strong>ompiler <strong>O</strong>ptimizations, <strong>R</strong>
+            econfigurable and <strong>S</strong>calable <strong>A</strong>rchitectures.{' '}
+            <ContactLink href="#about-corsa-section">Click here</ContactLink> to learn more about the name “CORSA”.
           </HeroMessage>
           <HeroMessage>
-            We focus on the development of highly efficient and user-friendly hardware acceleration systems. Our core
-            areas of expertise encompass the design of cutting-edge programming languages and compilers tailored for
-            hardware accelerators, as well as the envisioning of next-generation computer architectures. Additionally,
-            we are committed to exploring and implementing highly efficient machine learning algorithms and model
-            compression techniques. Moreover, our research extends to innovative hardware-aware neural architecture
-            search and the integration of hardware/software co-design flow. Through these pursuits, we aim to advance
-            the frontiers of technology and contribute to the advancement of the field.
+            We focus on the development of highly efficient and highly composable hardware acceleration systems. Our
+            core areas of expertise encompass the cutting-edge domain-specific hardware accelerator architectures,
+            programming languages and compilers tailored for hardware accelerators, next-generation heterogeneous
+            computer systems, as well as efficient hardware-friendly machine learning algorithms and systems.
           </HeroMessage>
           <HeroContact>
-            If you are interested in opportunities at CORSA Lab, please contact Prof. Sitao Huang (
+            If you are interested in learning more about CORSA Lab, please contact Prof. Sitao Huang (
             <ContactLink href="mailto:sitaoh@uci.edu">sitaoh@uci.edu</ContactLink>).
           </HeroContact>
         </HeroTextArea>

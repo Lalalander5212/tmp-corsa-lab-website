@@ -87,7 +87,7 @@ export const ResearchThemesSection = () => {
 
   return (
     <Section id="research-section">
-      <SectionHeader title="Research Themes" subtitle="Discover the research happening at CORSA Lab" />
+      <SectionHeader title="Research Themes" />
       <ResearchTopicsArea>
         {displayTopics.map(([topic, stats]) => {
           return (

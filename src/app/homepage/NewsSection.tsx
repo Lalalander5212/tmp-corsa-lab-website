@@ -31,7 +31,7 @@ export const NewsSection = () => {
   return (
     <FullWidthContainer>
       <Section id="news-section">
-        <SectionHeader title="Latest News" subtitle="Check the latest news from CORSA Lab" />
+        <SectionHeader title="Latest News" />
         <NewsItemsArea id="news area">
           {POSTS.slice(0, numCards).map((post, index) => (
             <NewsCard key={index} post={post} setModalContent={setModalContent} labelsOnLeft={true} />

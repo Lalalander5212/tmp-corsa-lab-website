@@ -61,15 +61,10 @@ const Title = styled.h2`
   }
 `
 
-const Subtitle = styled.h3`
-  ${FontVariant.title_sm}
-`
-
-export const SectionHeader: React.FC<{ title: string; subtitle: string }> = ({ title, subtitle }) => {
+export const SectionHeader: React.FC<{ title: string }> = ({ title }) => {
   return (
     <TitleContainer>
       <Title>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
     </TitleContainer>
   )
 }

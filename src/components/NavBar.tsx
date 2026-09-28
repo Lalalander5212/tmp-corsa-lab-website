@@ -177,6 +177,7 @@ const NavList = [
   { navItem: 'Research', path: '/research' },
   { navItem: 'News', path: '/news' },
   { navItem: 'WebTeam', path: '/webteam' },
+  { navItem: 'Gallery', path: '/gallery' },
 ]
 
 export const NavBar = () => {
