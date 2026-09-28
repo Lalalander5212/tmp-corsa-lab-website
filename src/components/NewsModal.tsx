@@ -5,6 +5,7 @@ import { Color, FontVariant, ScreenSize } from '@/app/theme'
 import { Category, CategoryContainer, NewsDate, categoryColors } from './NewsCard'
 import { Post } from '@/data/posts'
 import Markdown from 'react-markdown'
+import { withBasePath } from '@/lib/basePath'
 
 const ModalContainer = styled.div`
   position: fixed;
@@ -122,8 +123,9 @@ export const NewsModal = ({ post, onClose }: Props) => {
   }, [modalRef, onClose])
 
   useEffect(() => {
-    post &&
-      fetch(`/posts/${post.contentMdFilePath}`)
+    setMdContent(null)
+    post?.contentMdFilePath &&
+      fetch(withBasePath(`/posts/${post.contentMdFilePath}`))
         .then(response => response.text())
         .then(text => {
           const div = document.createElement('div')
